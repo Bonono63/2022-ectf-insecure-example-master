@@ -133,7 +133,7 @@ void handle_readback(void)
     // Read out the memory
     uart_write(HOST_UART, address, size);
     // Send the firmware itself back to the host during read out
-    uart_write(HOST_UART, (uint8_t *)FIRMWARE_STORAGE_PTR), (uint32_t *)FIRMWARE_SIZE_PTR);
+    uart_write(HOST_UART, (uint8_t *)FIRMWARE_STORAGE_PTR, (uint32_t *)FIRMWARE_SIZE_PTR);
 }
 
 
